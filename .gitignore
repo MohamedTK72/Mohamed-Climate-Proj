@@ -1,10 +1,16 @@
 # See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # compiled output
-dist
-tmp
-out-tsc
+dist/
+tmp/
+out-tsc/
 *.tsbuildinfo
+*.log
+
+# local environment files
+.env
+.env.*
+!.env.example
 .expo
 .expo-shared
 
