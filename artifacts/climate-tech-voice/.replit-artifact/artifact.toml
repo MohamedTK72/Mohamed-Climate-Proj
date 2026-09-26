@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "صوت من أجل المناخ"
+description = "موقع عربي شخصي لطالب في المرحلة الثانوية يشارك أفكاره حول التغير المناخي ودور التكنولوجيا في حماية البيئة والتكيف مع آثارها، مع روابط للتبرع والمشاركة."
+version = "1.0.0"
+id = "artifacts/climate-tech-voice"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25930
+
+[services.development]
+run = "pnpm --filter @workspace/climate-tech-voice run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/climate-tech-voice", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/climate-tech-voice/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25930"
+BASE_PATH = "/"
