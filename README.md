@@ -14,12 +14,9 @@
 الموقع مكتوب بطريقة بسيطة، والملفات المهمة هي:
 
 ```text
-artifacts/climate-tech-voice/
-├── index.html   # صفحة الموقع الأساسية
-└── src/
-    ├── App.tsx  # محتوى الموقع والتفاعلات البسيطة
-    ├── index.css # ألوان وتنسيق الموقع
-    └── main.tsx # تشغيل الموقع
+index.html  # صفحة الموقع الأساسية
+style.css   # ألوان وتنسيق الموقع
+main.js     # التفاعلات وتشغيل الموقع
 ```
 
 ## تشغيل الموقع
@@ -27,7 +24,7 @@ artifacts/climate-tech-voice/
 بعد تثبيت Node.js و pnpm، يمكن تشغيل الموقع بالأمر:
 
 ```bash
-pnpm --filter @workspace/climate-tech-voice run dev
+pnpm run dev
 ```
 
 ثم فتح الرابط الذي يظهر في شاشة التشغيل.
